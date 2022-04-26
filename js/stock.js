@@ -87,9 +87,17 @@ const productos =
         desc: "Suelto",
         precio: 3610,
         img: '/assets/img/columns3.jpg',
-        cantidad:26
-    }
+        cantidad:2
+    },
 ]
+
+//DESESTRUCTURACION DE ARRAY//
 
 export { productos };
 
+
+for (const {nombre: n, consola : f} of productos) {
+    console.log('Juego: ' + n + ' para consola ' + f);}
+
+
+    
