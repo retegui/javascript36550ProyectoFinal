@@ -15,7 +15,7 @@ modalContenedor.addEventListener('click', () => {
     cerrarCarrito.click()
 })
 
-// Detiene la propagación del vento click dentro del contenedor modalCarrito
+// Detiene la propagación del evento click dentro del contenedor modalCarrito
 modalCarrito.addEventListener('click',(e) => {
     e.stopPropagation()
 })

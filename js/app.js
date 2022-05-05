@@ -1,10 +1,11 @@
 import { carritoIndex } from "./carritoIndex.js";
-import { productos } from "./stock.js";
+import { getData } from "./getData.js";
 
-
-export const mostrarProductos = (productos) => {
+export const mostrarProductos = async () => {
 
   const contenedorProductos = document.getElementById("producto-contenedor");
+  const productos = await getData();
+
   productos.forEach(producto => {
     const div = document.createElement('div');
     div.classList.add('card');
@@ -24,7 +25,6 @@ export const mostrarProductos = (productos) => {
     const boton = document.getElementById(`boton${producto.id}`);
     boton.addEventListener('click', () => {
       carritoIndex(producto.id);
-
       swal({
         title: 'A wild AGREGAR AL CARRITO appears!         ITS SUPER EFFECTIVE!',
         text: ' Estas cada vez mas cerca de jugar. Segui comprando o finaliza tu compra entrando al carrito.',
@@ -36,4 +36,3 @@ export const mostrarProductos = (productos) => {
   });
 };
 
-mostrarProductos(productos);

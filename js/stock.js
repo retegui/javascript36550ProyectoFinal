@@ -98,6 +98,3 @@ export { productos };
 
 for (const {nombre: n, consola : f} of productos) {
     console.log('Juego: ' + n + ' para consola ' + f);}
-
-
-    
